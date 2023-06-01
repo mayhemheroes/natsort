@@ -16,7 +16,7 @@ def TestOneInput(data):
     try:
         natsorted(fuzz_helpers.build_fuzz_list(fdp, [str]), alg=fdp.PickValueInList(types))
     except ValueError:
-        if ctr > 1000:
+        if ctr > 100:
             raise
         return -1
 
